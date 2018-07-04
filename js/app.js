@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             this.idSetInterval = setInterval(() => {
                 this.moveFurry()
-            }, 250);
+            }, 500);
             this.moveFurry = () => {
                 if (this.furry.direction === "right") {
                     this.furry.x = this.furry.x + 1;
