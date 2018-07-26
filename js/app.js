@@ -14,15 +14,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
     function Game() {
-        this.board = document.querySelectorAll("#board>div");
+        var board = document.getElementById('board');
+        this.board = board.getElementsByTagName('div');
         this.furry = new Furry();
         this.coin = new Coin();
         this.score = 0;
         this.index = (x, y) => {
-            return x + (y * 10);
+            return (x + (y * 10));
         };
         this.showFurry = () => {
 
+            console.log("x"+this.furry.x+"y"+this.furry.y)
             this.board[this.index(this.furry.x, this.furry.y)].classList.add('furry');
 
         };
@@ -34,25 +36,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.idSetInterval = setInterval(() => {
                 this.moveFurry()
             }, 500);
+
             this.moveFurry = () => {
                 if (this.furry.direction === "right") {
-                    this.furry.x = this.furry.x + 1;
+                    this.furry.x ++;
+                    this.showFurry()
                 } else if (this.furry.direction === "left") {
-                    this.furry.x = this.furry.x - 1;
-                } else if (this.furry.direction === "top") {
-                    this.furry.y = this.furry.y + 1
+                    this.furry.x --;
+                    this.showFurry()
+                } else if (this.furry.direction === "up") {
+                    this.furry.y --;
+                    this.showFurry()
                 } else if (this.furry.direction === "down") {
-                    this.furry.y = this.furry.y - 1;
+                    this.furry.y ++;
+                    this.showFurry()
                 }
-                this.showFurry()
-                this.hideVisibleFurry()
-                this.checkCoinCollision()
-                this.gameOver()
+
+                this.checkCoinCollision();
+                this.gameOver();
+                this.hideVisibleFurry();
             }
 
         };
         this.hideVisibleFurry = () => {
-            document.querySelector(".furry").className = ("")
+            document.querySelector(".furry").removeAttribute('class')
         };
         this.turnFurry=function(event){
             switch (event.which) {
@@ -60,10 +67,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     this.furry.direction = 'left';
                     break;
                 case 38:
-                    this.furry.direction = 'right';
+                    this.furry.direction = 'up';
                     break;
                 case 39:
-                    this.furry.direction = 'top';
+                    this.furry.direction = 'right';
                     break;
                 case 40:
                     this.furry.direction = 'down';
@@ -94,6 +101,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     game.showFurry();
     game.showCoin();
     game.startGame();
+
+
+
+
+
+
     document.addEventListener('keydown', function(event){
         game.turnFurry(event);
     });
