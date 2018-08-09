@@ -42,10 +42,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     this.furry.x ++;
                     this.showFurry()
                 } else if (this.furry.direction === "left") {
-                    this.furry.x --;
+                    this.furry.x--;
                     this.showFurry()
                 } else if (this.furry.direction === "up") {
-                    this.furry.y --;
+                    this.furry.y--;
                     this.showFurry()
                 } else if (this.furry.direction === "down") {
                     this.furry.y ++;
@@ -77,8 +77,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     break;
             }
         }
+
         this.checkCoinCollision = () => {
-            if (this.furry.x == this.coin.x && this.furry.y == this.coin.y) {
+            if (this.furry.x === this.coin.x && this.furry.y === this.coin.y) {
                 document.querySelector("div.coin").classList.remove("coin");
                 this.score++;
                 document.getElementById("scoreboard").innerText = (this.score);
@@ -86,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 this.showCoin()
             }
         }
+
         this.gameOver = () => {
             if (this.furry.x < 0 || this.furry.x > 9 || this.furry.y < 0 || this.furry.y > 9) {
                 clearInterval(this.idSetInterval);
@@ -101,10 +103,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     game.showFurry();
     game.showCoin();
     game.startGame();
-
-
-
-
 
 
     document.addEventListener('keydown', function(event){
