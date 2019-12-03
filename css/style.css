@@ -1,12 +1,38 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-    margin: 0;
-    padding: 0;
+.tile {
+  background-image: url(../images/floor_1.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
 }
-
+.tile2{
+  background-image: url(../images/floor_2.png);
+}
+.tile3{
+  background-image: url(../images/floor_3.png);
+}
+.tile4{
+  background-image: url(../images/floor_4.png);
+}
+.tile5{
+  background-image: url(../images/floor_5.png);
+}
+.tile6{
+  background-image: url(../images/floor_6.png);
+}
+.tile7{
+  background-image: url(../images/floor_7.png);
+}
+.tile8{
+  background-image: url(../images/floor_8.png);
+}
 section#score {
   width: 100%;
 }
@@ -17,8 +43,7 @@ section#score {
   margin: 1em auto;
 }
 
-#board  > div {    
-  border: 1px solid black;
+#board>div {
   float: left;
   width: 64px;
   height: 64px;
@@ -30,47 +55,38 @@ section#score div {
   height: 3em;
   text-align: center;
   padding: 0.5em;
-  background-color: rgba(211,211,211, 0.75);
+  background-color: rgba(211, 211, 211, 0.75);
   border: 1px solid lightgray;
   border-radius: 1px;
   box-shadow: 1px 1px 5px 1px lightgray;
   margin: 1em auto;
 }
 
-
-
-
-.furry {
+.furry::after{
+  display: table;
+  content: "";
+  width:100%;
+  height:100%;
   background-image: url('../images/furry.png');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
+  z-index: 20;
 }
-.coin {
+.coin::after{
+  display: table;
+  content: "";
+  width: 100%;
+  height: 100%;
   background-image: url('../images/coin2.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-section#over {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  padding: 10px;
-  background-color: rgba(255, 255, 0, 0.75);
-}
-
-section#over pre {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  font-size: 10px;
-  font-weight: bolder;
-  color: brown;
-}
-
-.invisible {
-  display: none;
+.logScreen{
+  display: block;
+  position: absolute;
+  width: 100vh;
+  height: 100vh;
+  background-color:rgba(111,555,555,0.6);
 }
