@@ -106,14 +106,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 let endGame = document.createElement("div")
                 endGame.classList.add('logScreen')
                 let score = document.getElementById('score')
-                document.body.insertBefore(endGame, score)
+
                 let continueGame = document.createElement('button')
                 continueGame.innerText = "Continue"
+                continueGame.classList.add("button")
                 endGame.appendChild(continueGame)
                 let newGame = document.createElement('button')
                 newGame.innerText = "New game"
+                newGame.classList.add("button")
                 endGame.appendChild(newGame)
+                let wizard = document.createElement('div')
+                wizard.classList.add("furry")
+                endGame.appendChild(wizard)
 
+
+
+                document.querySelector(".container").insertBefore(endGame, score)
 
                 continueGame.addEventListener('click', this.continueGame)
                 newGame.addEventListener('click', this.restartGame)
@@ -159,7 +167,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     game.showFurry();
     game.showCoin();
     game.startGame();
-
 
 
 
