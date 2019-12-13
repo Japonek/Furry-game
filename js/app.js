@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         };
         this.start = (event) => {
             document.addEventListener('keydown', function start(event) {
-                if (event.keyCode === 68) {
+                if (event.keyCode === 32) {
                     game.hideVisibleFurry()
                     game.showFurry();
                     game.showCoin();
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     furry.classList.add("furry")
                     continueButtons[0].appendChild(furry)
                 }
-            } else if (event.keyCode === 68) {
+            } else if (event.keyCode === 32) {
                 (continueButtons[0].contains(document.querySelector(".furry"))) ? this.continueGame(): this.restartGame()
             }
 
