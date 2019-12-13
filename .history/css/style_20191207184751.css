@@ -1,0 +1,345 @@
+@font-face {
+  font-family: retro;
+  src: url(../fonts/lunchds.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: retro, sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(000, 000, 000, 0.8)
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [left] 1fr [wall-left] 60px [board]repeat(10, 60px) [wall-right]60px [right]1fr;
+  grid-template-rows: [top]50px [score]70px [wall-top-top]60px [wall-top]60px [board]repeat(10, 60px) [wall-bottom]60px [bottom]100px;
+}
+
+.container-endgame {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(000, 000, 000, 0.8);
+  position: absolute;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 1fr repeat(5, 60px) 1fr;
+  grid-template-rows: 1fr repeat(7, 60px) 1fr;
+  grid-template-areas:
+    "left top top top top top right"
+    "left wall-top wall-top wall-top wall-top wall-top right"
+    "left board board board board board right"
+    "left board board board board board right"
+    "left board board board board board right"
+    "left board board board board board right"
+    "left board board board board board right"
+    "left wall wall wall wall wall right"
+    "left bottom bottom bottom bottom bottom right"
+}
+.board {
+  grid-column: board;
+  grid-row: board;
+  width: 600px;
+  height: 600px;
+ 
+}
+.d-flex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.board>div {
+  width: 60px;
+  height: 60px;
+}
+.wall{
+  height: 60px;
+  width: 60px;
+}
+
+.board-endgame {
+  grid-area: board;
+  width: 300px;
+  height: 300px;
+}
+.walls-top{
+  grid-area: wall-top;
+}
+.wall{
+  height: 16px;
+  width: 16px;
+  background-image: url(../images/0x72_DungeonTilesetII_v1.2.png);
+  background-position: 16px 16px;
+}
+.wall-left{
+  background: url(../images/walls/wall_left.png) center center / cover no-repeat ;
+}
+.wall-right{
+  background: url(../images/walls/wall_right.png) center center / cover no-repeat ;
+}
+/*.wall-left::after{
+  content: "";
+  display: table;
+  background: url(../images/walls/wall_top_left.png) center center / cover no-repeat ;
+  width: 100%;
+  height: 100%;
+}*/
+.wall-left-corner::after{
+  content: "";
+  display: table;
+  background: url(../images/walls/wall_corner_bottom_left.png) center center / cover no-repeat ;
+  width: 100%;
+  height: 100%;
+}
+.tile {
+  background-image: url(../images/floor_1.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tile2 {
+  background-image: url(../images/floor_2.png);
+}
+
+.tile3 {
+  background-image: url(../images/floor_3.png);
+}
+
+.tile4 {
+  background-image: url(../images/floor_4.png);
+}
+
+.tile5 {
+  background-image: url(../images/floor_5.png);
+}
+
+.tile6 {
+  background-image: url(../images/floor_6.png);
+}
+
+.tile7 {
+  background-image: url(../images/floor_7.png);
+}
+
+.tile8 {
+  background-image: url(../images/floor_8.png);
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+section#score {
+  grid-column: board/wall-right;
+  grid-row: score;
+
+}
+
+#wall-top-top {
+  grid-column: board/wall-right;
+  grid-row: wall-top-top/wall-top;
+  background-image: url(../images/walls/wall_top_mid.png);
+  background-size: 60px;
+}
+
+#wall-top {
+  grid-column: board/wall-right;
+  grid-row: wall-top/board;
+  background-image: url(../images/walls/wall_mid.png);
+  background-size: 60px;
+}
+
+#wall-left-corner {
+  grid-column: wall-left;
+  grid-row: wall-top-top;
+  background-image: url(../images/walls/wall_side_top_left.png);
+  background-size: 60px;
+}
+
+#wall-left {
+  grid-column: wall-left;
+  grid-row: wall-top/wall-bottom;
+  background-image: url(../images/walls/wall_side_mid_left.png);
+  background-size: 60px;
+}
+
+#wall-right-corner {
+  grid-column: wall-right;
+  grid-row: wall-top-top;
+  background-image: url(../images/walls/wall_side_top_right.png);
+  background-size: 60px;
+
+}
+
+#wall-right {
+  grid-column: wall-right;
+  grid-row: wall-top/wall-bottom;
+  background-image: url(../images/walls/wall_side_mid_right.png);
+  background-size: 60px;
+}
+
+#wall-bottom {
+  grid-column: board/wall-right;
+  grid-row: wall-bottom;
+  background-image: url(../images/walls/wall_mid.png);
+
+  background-size: 60px;
+}
+
+#wall-bottom::before {
+  content: "";
+  display: table;
+  grid-column: board/wall-right;
+  grid-row: wall-bottom;
+  background-image: url(../images/walls/wall_top_mid.png);
+  background-size: 63px;
+  transform: rotate(180deg);
+  width: 100%;
+  height: 100%;
+}
+
+#wall-left-bottom-corner {
+  grid-column: wall-left;
+  grid-row: wall-bottom;
+  background-image: url(../images/walls/wall_mid.png);
+  background-size: 60px;
+  margin-left: 46px;
+  width: 32%;
+  height: 100%;
+  background-position: right;
+
+}
+
+#wall-left-bottom-corner::after {
+  display: table;
+  content: "";
+  grid-column: wall-left;
+  grid-row: wall-bottom;
+  background-image: url(../images/walls/wall_side_top_right.png);
+  background-size: 60px;
+  width: 90%;
+  height: 100%;
+  transform: rotate(180deg)
+}
+
+#wall-right-bottom-corner {
+  grid-column: wall-right;
+  grid-row: wall-bottom;
+  background-image: url(../images/walls/wall_mid.png);
+  background-size: 60px;
+  width: 30%;
+  height: 100%;
+  background-position: left;
+}
+
+#wall-right-bottom-corner::after {
+  display: table;
+  content: "";
+  grid-column: wall-right;
+  grid-row: wall-bottom;
+  background-image: url(../images/walls/wall_side_top_right.png);
+  background-size: 60px;
+  width: 103%;
+  height: 100%;
+  transform: rotate(180deg);
+}
+
+
+section#score div {
+  font-size: 2rem;
+  text-align: center;
+
+}
+
+#scoreboard {
+  font-size: 2rem;
+}
+
+.furry {
+  overflow: visible;
+}
+
+.furry::after {
+  display: table;
+  content: "";
+  width: 100%;
+  height: 110%;
+  background-image: url('../images/furry.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  animation: animate 1s linear infinite;
+  z-index: 10;
+
+}
+
+@keyframes animate {
+  25% {
+    background-image: url('../images/wizard/wizzard_m_run_anim_f0.png');
+  }
+
+  50% {
+    background-image: url('../images/wizard/wizzard_m_run_anim_f1.png');
+  }
+
+  75% {
+    background-image: url('../images/wizard/wizzard_m_run_anim_f2.png');
+  }
+
+  100% {
+    background-image: url('../images/wizard/wizzard_m_run_anim_f3.png');
+  }
+}
+
+@keyframes animate2 {
+  25% {
+    background-image: url('../images/wizard/wizzard_m_idle_anim_f0.png');
+  }
+
+  50% {
+    background-image: url('../images/wizard/wizzard_m_idle_anim_f1.png');
+  }
+
+  75% {
+    background-image: url('../images/wizard/wizzard_m_idle_anim_f2.png');
+  }
+
+  100% {
+    background-image: url('../images/wizard/wizzard_m_idle_anim_f3.png');
+  }
+}
+
+.coin::after {
+  display: table;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/flask_big_yellow.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logScreen {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(000, 000, 000, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.logScreen button {
+  font-size: 2rem;
+  padding: 1rem;
+  border: none;
+  background: none;
+}

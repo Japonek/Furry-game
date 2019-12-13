@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Javascript Furry game</title>
+  <link rel='stylesheet' href='css/style.css'>
+
+</head>
+
+<body>
+  <div class="container-endgame">
+
+    <div class="walls-top d-flex">
+      <div class="wall wall-corner-left"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall wall-corner-right"></div>
+    </div>
+    <section class="board-endgame d-flex">
+      <div class="tile wall-side-mid-left"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile5"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile5 wall-side-mid-right"></div>
+      <div class="tile wall-side-mid-left"></div>
+      <div class="tile tile2"></div>
+      <div class="tile tile3"></div>
+      <div class="tile"></div>
+      <div class="tile tile4"></div>
+      <div class="tile wall-side-mid-right"></div>
+      <div class="tile wall-side-mid-left tile7"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile4"></div>
+      <div class="tile tile6"></div>
+      <div class="tile wall-side-mid-right"></div>
+      <div class="tile wall-side-mid-left"></div>
+      <div class="tile tile7"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile wall-side-mid-right"></div>
+      <div class="tile tile6 wall-corner-bottom-left"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile3 wall-corner-bottom-right"></div>
+    </section>
+    <div class="walls-bottom d-flex">
+      <div class=" wall-left"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall-right"></div>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <section id='score'>
+      <div>
+        SCORE<br>
+        <strong id='scoreboard'>0</strong>
+      </div>
+    </section>
+
+    <div id="wall-left-corner"></div>
+    <div id="wall-left"></div>
+    <div id="wall-top-top"></div>
+    <div id="wall-top"></div>
+    <div id="wall-right-corner"></div>
+    <div id="wall-right"></div>
+
+    <section id="board "class='d-flex'>
+      <div class="tile"></div>
+      <div class="tile tile3"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile5"></div>
+      <div class="tile"></div>
+      <div class="tile tile2"></div>
+      <div class="tile tile3"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile7"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile4"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile7"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile6"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile3"></div>
+      <div class="tile"></div>
+      <div class="tile tile8"></div>
+      <div class="tile"></div>
+      <div class="tile tile2"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile2"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile7"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile8"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile4"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile6"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile8"></div>
+      <div class="tile"></div>
+      <div class="tile tile6"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile7"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile2"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile5"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile7"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile5"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile2"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile4"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile6"></div>
+      <div class="tile"></div>
+      <div class="tile tile7"></div>
+      <div class="tile"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile8"></div>
+      <div class="tile"></div>
+      <div class="tile tile2"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile6"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile tile4"></div>
+      <div class="tile"></div>
+      <div class="tile tile5 "></div>
+    </section>
+
+    <div id="wall-right-bottom-corner"></div>
+    <div id="wall-bottom"></div>
+    <div id="wall-left-bottom-corner"></div>
+
+
+  </div>
+
+
+  <script src='js/app.js'></script>
+
+</body>
+
+</html>

@@ -9,130 +9,321 @@
 </head>
 
 <body>
+ 
   <div class="container">
+      <div class="container-endgame">
+          <section class="walls-top-top d-flex">
+            <div class="wall wall-corner-left-top "></div>
+            <div class="wall wall-top-top "></div>
+            <div class="wall wall-top-top "></div>
+            <div class="wall wall-top-top "></div>
+            <div class="wall wall-top-top "></div>
+            <div class="wall wall-corner-right-top "></div>
+          </section>
+          <section class="walls-top d-flex">
+            <div class="wall wall-corner-left"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall wall-corner-right"></div>
+          </section>
+          <section id="board-endgame"class="d-flex">
+            <div class="invisible endgame-elements">
+              <div class="endgame-element">GAME OVER</div>
+              <div class="endgame-element "><div class="continue-button"></div><div class="continue">CONTINUE</div></div>
+              <div class="endgame-element "><div class="continue-button"></div><div class="continue">NEW GAME</div></div>
+              <div class="endgame-element">SCORE&nbsp<span class="scoreboard">0</span></div>
+            </div>
+            <div class="newgame-elements endgame-elements">
+              <div class="endgame-element ">
+                <div class="continue-button"> <div class="furry"></div></div>
+                  
+                  <div class="continue">NEW GAME</div>
+                </div>
+              <div class="endgame-element instructions d-flex">
+                <p>Help wizard collect coins,
+                be aware of walls and remember more coins You collect more greedy he gets.</p>
+                <p>Control wizard on WASD to start press D</p>
+              </div>
+            </div>
+            <div class="tile ">
+              <div class="wall wall-side-mid-left"></div>
+            </div>
+            <div class="tile tile3"></div>
+            <div class="tile tile5"></div>
+            <div class="tile tile7"></div>
+            <div class="tile tile3"></div>
+            <div class="tile tile5">
+              <div class="wall wall-side-mid-right"></div>
+            </div>
+            <div class="tile ">
+              <div class="wall wall-side-mid-left"></div>
+            </div>
+            <div class="tile tile2"></div>
+            <div class="tile tile3"></div>
+            <div class="tile"></div>
+            <div class="tile tile4"></div>
+            <div class="tile">
+              <div class="wall wall-side-mid-right"></div>
+            </div>
+            <div class="tile wall-side-mid-left ">
+              <div class="wall wall-side-mid-left"></div>
+            </div>
+            <div class="tile tile4"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile tile6"></div>
+            <div class="tile ">
+              <div class="wall wall-side-mid-right"></div>
+            </div>
+            <div class="tile">
+              <div class="wall wall-side-mid-left"></div>
+            </div>
+            <div class="tile tile7"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile">
+              <div class="wall wall-side-mid-right"></div>
+            </div>
+            <div class="tile tile6 ">
+              <div class="wall wall-corner-bottom-left"></div>
+            </div>
+            <div class="tile tile3">
+              <div class="wall wall-top-top "></div>
+            </div>
+            <div class="tile">
+              <div class="wall wall-top-top "></div>
+            </div>
+            <div class="tile">
+              <div class="wall wall-top-top "></div>
+            </div>
+            <div class="tile">
+              <div class="wall wall-top-top "></div>
+            </div>
+            <div class="tile tile3 ">
+              <div class="wall wall-corner-bottom-right"></div>
+            </div>
+          </section>
+          <section class="walls-bottom d-flex">
+            <div class="wall wall-left "></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall wall-right "></div>
+          </section>
+      
+        </div>
+      
     <section id='score'>
       <div>
         SCORE<br>
-        <strong id='scoreboard'>0</strong>
+        <strong class='scoreboard'>0</strong>
       </div>
     </section>
-    
-      <div id="wall-left-corner"></div>
-      <div id="wall-left"></div>
-      <div id="wall-top-top"></div>
-      <div id="wall-top"></div>
-      <div id="wall-right-corner"></div>
-      <div id="wall-right"></div>
-  
-    <section id='board'>
-      <div class="tile"></div>
-      <div class="tile tile3"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile5"></div>
-      <div class="tile"></div>
-      <div class="tile tile2"></div>
-      <div class="tile tile3"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile7"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile4"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile7"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile6"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile3"></div>
-      <div class="tile"></div>
-      <div class="tile tile8"></div>
-      <div class="tile"></div>
-      <div class="tile tile2"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile2"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile7"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile8"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile4"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile6"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile8"></div>
-      <div class="tile"></div>
-      <div class="tile tile6"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile7"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile2"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile5"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile7"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile5"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile2"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile4"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile6"></div>
-      <div class="tile"></div>
-      <div class="tile tile7"></div>
-      <div class="tile"></div>
-      <div class="tile tile3"></div>
-      <div class="tile tile8"></div>
-      <div class="tile"></div>
-      <div class="tile tile2"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile6"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile tile4"></div>
-      <div class="tile"></div>
-      <div class="tile tile5 "></div>
+    <div class="walls-top-top d-flex">
+      <div class="wall wall-corner-left-top "></div>
+      <div class="wall wall-top-top "></div>
+      <div class="wall wall-top-top "></div>
+      <div class="wall wall-top-top "></div>
+      <div class="wall wall-top-top "></div>
+      <div class="wall wall-top-top "></div>
+      <div class="wall wall-top-top "></div>
+      <div class="wall wall-top-top "></div>
+      <div class="wall wall-top-top "></div>
+      <div class="wall wall-corner-right-top "></div>
+    </div>
+    <section class="walls-top d-flex">
+      <div class="wall wall-corner-left"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall wall-corner-right"></div>
     </section>
-  
-      <div id="wall-right-bottom-corner"></div>
-      <div id="wall-bottom"></div>
-      <div id="wall-left-bottom-corner"></div>
-   
+
+    <section id="board" class="d-flex">
+      <div class="tile tile8">
+        <div class="wall wall-side-mid-left"></div>
+      </div>
+      <div class="tile tilea"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile7"></div>
+      <div class="tile tile8"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile1"></div>
+      <div class="tile tile2"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile7">
+        <div class="wall wall-side-mid-right"></div>
+      </div>
+      <div class="tile tile1">
+        <div class="wall wall-side-mid-left"></div>
+      </div>
+      <div class="tile tile1"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile1"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile1"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile1">
+        <div class="wall wall-side-mid-right"></div>
+      </div>
+      <div class="tile tile4">
+        <div class="wall wall-side-mid-left"></div>
+      </div>
+      <div class="tile tile1"></div>
+      <div class="tile tile1"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile2"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile6"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile1">
+        <div class="wall wall-side-mid-right"></div>
+      </div>
+      <div class="tile tile8">
+        <div class="wall wall-side-mid-left"></div>
+      </div>
+      <div class="tile tile3"></div>
+      <div class="tile tile1"></div>
+      <div class="tile tile2"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile5">
+        <div class="wall wall-side-mid-right"></div>
+      </div>
+      <div class="tile">
+        <div class="wall wall-side-mid-left"></div>
+      </div>
+      <div class="tile tile2"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile7"></div>
+      <div class="tile tile1"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile1"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile5">
+        <div class="wall wall-side-mid-right"></div>
+      </div>
+      <div class="tile">
+        <div class="wall wall-side-mid-left"></div>
+      </div>
+      <div class="tile tile3"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile2"></div>
+      <div class="tile tile1"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile2"></div>
+      <div class="tile tile1"></div>
+      <div class="tile tile7">
+        <div class="wall wall-side-mid-right"></div>
+      </div>
+      <div class="tile">
+        <div class="wall wall-side-mid-left"></div>
+      </div>
+      <div class="tile tile3"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile1"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile7">
+        <div class="wall wall-side-mid-right"></div>
+      </div>
+      <div class="tile">
+        <div class="wall wall-side-mid-left"></div>
+      </div>
+      <div class="tile tile3"></div>
+      <div class="tile tile2"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile1"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile5">
+        <div class="wall wall-side-mid-right"></div>
+      </div>
+      <div class="tile">
+        <div class="wall wall-side-mid-left"></div>
+      </div>
+      <div class="tile tile3"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile2"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile5"></div>
+      <div class="tile tile6"></div>
+      <div class="tile tile3"></div>
+      <div class="tile tile5">
+        <div class="wall wall-side-mid-right"></div>
+      </div>
+      <div class="tile tile8 ">
+        <div class="wall wall-corner-bottom-left"></div>
+      </div>
+      <div class="tile tile3">
+        <div class="wall wall-top-top "></div>
+      </div>
+      <div class="tile">
+        <div class="wall wall-top-top "></div>
+      </div>
+      <div class="tile">
+        <div class="wall wall-top-top "></div>
+      </div>
+      <div class="tile tile6">
+        <div class="wall wall-top-top "></div>
+      </div>
+      <div class="tile tile4">
+        <div class="wall wall-top-top "></div>
+      </div>
+      <div class="tile">
+        <div class="wall wall-top-top "></div>
+      </div>
+      <div class="tile tile3">
+        <div class=" wall wall-top-top "></div>
+      </div>
+      <div class="tile">
+        <div class="wall wall-top-top "></div>
+      </div>
+      <div class="tile tile6 ">
+        <div class=" wall wall-corner-bottom-right"></div>
+      </div>
+    </section>
+    <section class="walls-bottom d-flex">
+      <div class="wall wall-left "></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall"></div>
+      <div class="wall wall-right "></div>
+    </section>
+
+
 
   </div>
+
+
   <script src='js/app.js'></script>
 
 </body>
